@@ -1,0 +1,37 @@
+<meta charset="utf-8">
+<div class="container">
+    <h3 class="page-header">Cadastro Instituição</h3>
+
+    <div class="row">
+        <div class="row">
+            <div class="form-group col-md-2">
+                <label for="inputCod">Código</label>
+                <input type="text" class="form-control" id="inputCod" placeholder="código da Instituição"
+                    ng-model="instituicaoDTO.codInstituicao">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputNome">Nome</label>
+                <input type="text" class="form-control" id="inputNome" placeholder="nome da Instituição"
+                    ng-model="instituicaoDTO.nomeInstituicao">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label for="inputTelefone">telefone</label>
+                <input type="text" class="form-control" id="inputTelefone" placeholder="telefone da Instituição"
+                    ng-model="instituicaoDTO.telefoneInstituicao">
+            </div>
+            <div class="form-group col-md-4">
+               <label for="inputEndereco">Endereço</label>
+                <input type="text" class="form-control" id="inputEndereco" placeholder="endereço da Instituição"
+                    ng-model="instituicaoDTO.enderecoInstituicao">
+            </div>
+            </div>
+        </div>
+    </div>
+    <button type="submit" ng-click="saveInstituicao()">Salvar</button>
+
+
+
+
+</div>

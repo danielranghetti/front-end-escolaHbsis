@@ -1,0 +1,23 @@
+<meta charset="utf-8">
+<div class="container">
+    <h3 class="page-header">Consulta para extração do Boletim</h3>
+    <div class="row">
+        <div class="row">
+            <div class="form-group col-md-2">
+                <label for="inputCod">Código aluno</label>
+                <input type="text" class="form-control" id="inputCod" placeholder="código do aluno"
+                    ng-model="notaDTO.aluno">
+            </div>
+        </div>
+        <div class="form-group col-md-3">
+            <label for="inputInstituicao">Formato do Boletim:</label>
+            <br>
+            <select ng-model="notaDTO.format">
+                <Option>pdf</Option>
+                <Option>html</Option>
+            </select>
+
+        </div>
+        <button type="submit" ng-click="extrairBoletim()">Extrair</button>
+    </div>
+</div>
