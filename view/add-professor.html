@@ -1,0 +1,39 @@
+<meta charset="utf-8">
+<div class="container">
+    <h3 class="page-header">Cadastro Professor</h3>    
+        <div class="row">
+            <div class="form-group col-md-2">
+                <label for="inputCod">Código:</label>
+                <input type="text" class="form-control" id="inputCod" placeholder="código do professor"
+                    ng-model="professor.codProfessor">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputnome">nome:</label> <input type="text" class="form-control"
+                    id="inputnome" placeholder="informer o nome do professor" 
+                    ng-model="professor.nomeProfessor">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputSobrenome">Sobrenome:</label>
+                <input type="text" class="form-control"
+                    id="inputSobrenome" placeholder="informer o sobrenome do professor" 
+                    ng-model="professor.sobrenomeProfessor">
+            </div>
+          
+        </div>
+        <div class="row">
+        <div class="form-group col-md-2">
+            <label for="inputenderecoProfessor">Endereço:</label>
+            <input type="text" class="form-control" id="inputenderecoProfessor" placeholder="informer o endereço do professor"
+                ng-model="professor.enderecoProfessor">
+        </div>
+        <div class="form-group col-md-2">
+            <label for="inputtelefoneProfessor">Telefone:</label>
+            <input type="text" class="form-control" id="inputtelefoneProfessor" placeholder="informer o Telefone do professor"
+                ng-model="professor.telefoneProfessor">
+        </div>
+       
+    </div>
+    <button ng-click="salvarProfessor()">Salvar</button>
+
+
+    </div>

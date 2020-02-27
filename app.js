@@ -13,6 +13,8 @@ escola.config(['$routeProvider', function ($routeProvider) {
         .when("/boletim", {templateUrl:'view/extrair-boletim.html', controller:'boletimController'})
 
         .when("/nova-nota", {templateUrl:'view/add-nota.html', controller:'notaController'})
+        
+        .when("/novo-professor", {templateUrl:'view/add-professor.html', controller:'professorController'})
 
         .when("/novo-aluno", {templateUrl:'view/add-aluno.html', controller:'alunoController'})
         .when("/consulta-aluno", {templateUrl:'view/consulta-aluno.html', controller:'alunoController'})
