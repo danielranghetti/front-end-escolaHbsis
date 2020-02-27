@@ -1,0 +1,53 @@
+<div class="container" >
+    <div class="content">
+        <div class="row">
+            <div class="col-12">
+                <br>
+                <h2 class="titulo">Lista de Aluno</h2>
+                <br>
+                <input type="text" class="txtPesquisa" id="pesquisa" placeholder="Pesquise por um aluno"
+                 ng-model="search"/>
+                <button for="inputPeriodoTurma" ng-click="pesquisaAluno()">pesquisa Aluno</button>
+               
+                <div class="row">
+                <div class="table-responsive col-md-9">
+                    <table class="table table-bordered" >
+                    
+                    <tr>
+                       
+                        <th>Código</th>
+                        <th>Nome</th>
+                        <th>Responsavel</th>
+                        <th>Endereço</th>
+                        <th>Telefone</th>
+                        <th>Matricula</th>
+                        <th>Turma</th>
+                        <th class="actions">Ações</th>
+                    </tr>
+                    <tbody  ng-repeat="y in alunos | filter: search | orderBy:  turmas.id">
+                        
+                        <td>{{ y.codAluno }}</td>
+                        <td>{{ y.nomeAluno + ' '+ y.sobrenomeAluno }}</td>
+                        <td>{{ y.responsavel }}</td>
+                        <td>{{ y.enderecoAluno }}</td>
+                        <td>{{ y.telefoneAluno }}</td>
+                        <td>{{ y.matricula }}</td>
+                        <td>{{ y.alunoTurmaDTOS.codTurma }}</td>
+                        <td class="actions">
+                          <button class="btn btn-danger" ng-click="delete(y.id)">Excluir</button>
+                            <a href="#/edita-turma">
+                                <button class="btn btn-submit" ng-click="dadosTurma(id, codTurma,periodoTurma,instituicao)">Editar</button>
+                            </a></td>
+
+                    </tbody>
+
+                </table>
+                </div>
+
+                
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,49 @@
+<meta charset="utf-8">
+<div class="container">
+    <h3 class="page-header">Cadastro nota</h3>    
+        <div class="row">
+            <div class="form-group col-md-2">
+                <label for="inputCod">Código:</label>
+                <input type="text" class="form-control" id="inputCod" placeholder="código da nota"
+                    ng-model="nota.codNota">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputaluno">aluno:</label> <input type="text" class="form-control"
+                    id="inputaluno" placeholder="informer o código do aluno" 
+                    ng-model="nota.aluno">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputDisciplina">Disciplina:</label>
+                <input type="text" class="form-control"
+                    id="inputDisciplina" placeholder="informer o código da disciplina" 
+                    ng-model="nota.disciplina">
+            </div>
+          
+        </div>
+        <div class="row">
+        <div class="form-group col-md-2">
+            <label for="inputNota">Nota:</label>
+            <input type="number" class="form-control" id="inputNota" placeholder="nota"
+                ng-model="nota.notaPrimeira">
+        </div>
+        <div class="form-group col-md-2">
+            <label for="inputNotaSegunda">Nota:</label>
+            <input type="number" class="form-control" id="inputNotaSegunda" placeholder="nota"
+                ng-model="nota.notaSegunda">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="inputInstituicao">Semestre da Nota:</label>
+            <br>
+            <select ng-model="nota.periodo">
+                <Option>Primeiro-Semestre</Option>
+                <Option>Segundo-Semestre</Option>
+            </select>
+
+        </div>
+
+
+    </div>
+    <button ng-click="salvarNota()">Salvar</button>
+
+
+    </div>

@@ -1,0 +1,45 @@
+<div class="container" ng-controller="turmaController">
+    <div class="content">
+        <div class="row">
+            <div class="col-12">
+                <br>
+                <h2>Lista de Turma</h2>
+                <br>
+                <input type="text" class="txtPesquisa" id="pesquisa" placeholder="Pesquise por um turma"
+                 ng-model="search"/>
+                <button for="inputPeriodoTurma" ng-click="pesquisaTurma()">pesquisa turma</button>
+               
+                <div class="row">
+                <div class="table-responsive col-md-9">
+                    <table class="table table-bordered" >
+                    
+                    <tr>
+                        <th>ID</th>
+                        <th>Código</th>
+                        <th>Periodo de aula</th>
+                        <th>Nome da instituição</th>
+                        <th class="actions">Ações</th>
+                    </tr>
+                    <tbody  ng-repeat="y in turmas | filter: search | orderBy:  turmas.id">
+                        <td>{{ y.id }}</td>
+                        <td>{{ y.codTurma }}</td>
+                        <td>{{ y.periodoTurma }}</td>
+                        <td>{{ y.instituicao.nomeInstituicao }}</td>
+                        <td class="actions">
+                          <button class="btn btn-danger" ng-click="delete(y.id)">Excluir</button>
+                            <a href="#/edita-turma">
+                                <button class="btn btn-submit" ng-click="dadosTurma(id, codTurma,periodoTurma,instituicao)">Editar</button>
+                            </a></td>
+
+                    </tbody>
+
+                </table>
+                </div>
+
+                
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>

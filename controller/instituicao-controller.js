@@ -14,4 +14,22 @@ escola.controller("instituicaoController", function ($scope, $http) {
                 console.log(response.status)
             });
     }
+
+    $scope.toInit = function () {
+
+        $http({ method: 'GET', url: 'http://localhost:8092/instituicao/consulta' })
+            .then(function (response) {
+                $scope.instituicoes = response.data;
+                console.log(response.data);
+                console.log(response.status);
+            }, function (response) {
+                console.log(response.data);
+                console.log(response.status);
+            });                              
+    };
+
+    $scope.exibirinstituicao = function (i) {
+        $scope.instituicoes = {codInstituicao: i.codInstituicao, nomeInstituicao: i.nomeInstituicao, 
+            telefoneInstituicao: i.telefoneInstituicao, enderecoInstituicao: i.enderecoInstituicao }
+    };
 });

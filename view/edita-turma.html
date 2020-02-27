@@ -1,15 +1,15 @@
 <meta charset="utf-8">
-<div class="container" ng-init="instituicaoTurma()">
+<div class="container">
 
-	<h3 class="page-header">Cadastro Turma</h3>
+	<h3 class="page-header">Editar Turma</h3>
 
 
 	<div class="row">
 		<div class="row">
 			<div class="form-group col-md-2">
 				<label for="inputCod">Código:</label> 
-				<input type="text" class="form-control" id="inputCod"
-					placeholder="código da turma" ng-model="turmaDTO.codTurma">
+				<input type="text" class="form-control" id="inputCod" readonly
+                ng-model="vizualizarTurma.codTurma>
 			</div>
 			<div class="form-group col-md-3">
 				<label for="inputPeriodoTurma">Periodo da turma:</label> <input type="text" class="form-control"

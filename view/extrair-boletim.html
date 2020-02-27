@@ -8,7 +8,6 @@
                 <input type="text" class="form-control" id="inputCod" placeholder="código do aluno"
                     ng-model="notaDTO.aluno">
             </div>
-        </div>
         <div class="form-group col-md-3">
             <label for="inputInstituicao">Formato do Boletim:</label>
             <br>
@@ -16,8 +15,16 @@
                 <Option>pdf</Option>
                 <Option>html</Option>
             </select>
-
         </div>
-        <button type="submit" ng-click="extrairBoletim()">Extrair</button>
+        <div class="form-group col-md-3">
+            <label for="inputInstituicao">Periodo:</label>
+            <br>
+            <select ng-model="notaDTO.periodo">
+                <Option>Primeiro-Semestre</Option>
+                <Option>Segundo-Semestre</Option>
+            </select>
+        </div>
+       
     </div>
+    <button type="submit" ng-click="extrairBoletim()">Extrair</button>
 </div>
