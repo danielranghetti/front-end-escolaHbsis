@@ -3,11 +3,11 @@
         <div class="row">
             <div class="col-12">
                 <br>
-                <h2 class="titulo">Lista de Aluno</h2>
+                <h2 class="titulo">Lista de Intituição</h2>
                 <br>
-                <input type="text" class="txtPesquisa" id="pesquisa" placeholder="Pesquise por um aluno"
+                <input type="text" class="txtPesquisa" id="pesquisa" placeholder="Pesquise por uma intituicao"
                  ng-model="search"/>
-                <button for="inputPeriodoTurma" ng-click="pesquisaAluno()">pesquisa Aluno</button>
+                <button for="inputPeriodoTurma" ng-click="pesquisaInstituicao()">pesquisa instituição</button>
                
                 <div class="row">
                 <div class="table-responsive col-md-9">
@@ -17,26 +17,19 @@
                        
                         <th>Código</th>
                         <th>Nome</th>
-                        <th>Responsavel</th>
-                        <th>Endereço</th>
                         <th>Telefone</th>
-                        <th>Matricula</th>
-                        <th>Turma</th>
+                        <th>Endereço</th>
                         <th class="actions">Ações</th>
                     </tr>
-                    <tbody  ng-repeat="y in alunos | filter: search">
+                    <tbody  ng-repeat="y in instituicoes | filter: search ">
                         
-                        <td>{{ y.codAluno }}</td>
-                        <td>{{ y.nomeAluno + ' '+ y.sobrenomeAluno }}</td>
-                        <td>{{ y.responsavel }}</td>
-                        <td>{{ y.enderecoAluno }}</td>
-                        <td>{{ y.telefoneAluno }}</td>
-                        <td>{{ y.matricula }}</td>
-                        <td>{{ y.alunoTurmaDTOS.codTurma }}</td>
+                        <td>{{ y.codInstituicao }}</td>
+                        <td>{{ y.nomeInstituicao }}</td>
+                        <td>{{ y.telefoneInstituicao }}</td>
+                        <td>{{ y.enderecoInstituicao }}</td>
                         <td class="actions">
                           <button class="btn btn-danger" ng-click="delete(y.id)">Excluir</button>
                            
-
                     </tbody>
 
                 </table>

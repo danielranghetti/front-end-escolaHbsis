@@ -8,6 +8,7 @@ escola.config(['$routeProvider', function ($routeProvider) {
         .when("/edita-turma", { templateUrl: 'view/edita-turma.html', controller:'turmaController'})
 
         .when("/nova-instituicao", {templateUrl:'view/add-instituicao.html', controller:'instituicaoController'})
+        .when("/consulta-instituicao", {templateUrl:'view/consulta-instituicao.html', controller:'instituicaoController'})
         
         .when("/boletim", {templateUrl:'view/extrair-boletim.html', controller:'boletimController'})
 

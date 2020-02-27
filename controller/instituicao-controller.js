@@ -15,7 +15,7 @@ escola.controller("instituicaoController", function ($scope, $http) {
             });
     }
 
-    $scope.toInit = function () {
+    $scope.pesquisaInstituicao = function () {
 
         $http({ method: 'GET', url: 'http://localhost:8092/instituicao/consulta' })
             .then(function (response) {

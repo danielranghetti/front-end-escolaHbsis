@@ -1,7 +1,7 @@
 escola.controller("alunoController", function ($scope, $http) {
     $scope.alunoDTO = {
         codAluno: '', nomeAluno: '', sobrenomeAluno: '', responsavel: '',
-        enderecoAluno: '', telefoneAluno: '', matricula: '', alunoTurmaDTOS: [{codTurma:''}]
+        enderecoAluno: '', telefoneAluno: '', matricula: '', alunoTurmaDTOS: [{turma:''}]
     };
     $scope.salvarAluno = function(){
         console.log('salvando aluno')
