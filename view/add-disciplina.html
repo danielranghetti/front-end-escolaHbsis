@@ -1,0 +1,29 @@
+<meta charset="utf-8">
+<div class="container">
+    <h3 class="page-header">Cadastro Disciplina</h3>    
+        <div class="row">
+            <div class="form-group col-md-2">
+                <label for="inputCod">Código:</label>
+                <input type="text" class="form-control" id="inputCod" placeholder="código da disciplina"
+                    ng-model="disciplina.codDisciplina">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputDisciplina">Disciplina:</label> <input type="text" class="form-control"
+                    id="inputDisciplina" placeholder="informer o nome da disciplina" 
+                    ng-model="disciplina.nomeDisciplina">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputProfessor">Professor:</label>
+                <input type="text" class="form-control"
+                    id="inputProfessor" placeholder="informer o código do professor" 
+                    ng-model="disciplina.professor">
+            </div>
+          
+        </div>      
+
+
+    </div>
+    <button ng-click="salvarDisciplina()">Salvar</button>
+
+
+    </div>
